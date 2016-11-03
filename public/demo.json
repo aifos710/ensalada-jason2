@@ -1,0 +1,17 @@
+{
+	"nombre": "Sofia",
+	"apellido": "Caballero",
+	"edad": "22",
+	"fechaNacimiento": "07/10/1987",
+	"email": "sofia.m.caballero@gmail.com",
+	"hobbies":[
+		"escuchar musica",
+		"pintar",
+		"ir al cine"
+	],
+	"mascota": {
+		"especie": "masculino-femeninoide",
+		"nombre" : "aka",
+		"edad" : "10"
+	}
+} 
