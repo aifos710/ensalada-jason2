@@ -7,25 +7,19 @@ var plantilla = "<div>"+
 	"</div>";
 
 $(document).ready(function(){
-	$.ajax({
-		url:"http://localhost:1234/demo.json",
-		type: "GET",
-		success: function(response){
+	$.get("http://localhost:1234/demo.json",
+		function(response){
 			$("#datos").html(plantilla
 				.replace("__nombre__", response.nombre)
 				.replace("__apellido__", response.apellido)
 				.replace("__edad__", response.edad)
 				.replace("__email__", response.email)
-				.replace("__fachaNac__", response.fechaNacimiento));
+				.replace("__fechaNacimiento__", response.fechaNacimiento));
 			var hobbies = "<ul>";
 			for (var i = 0, l = response.hobbies.length; i < l; i++){
 				hobbies += "<li>" + response.hobbies[i] + "</li>";
 			}
 			hobbies += "</ul>";
 			$("#hobbies").html(hobbies);
-		},
-		/*error: function(error){
-			console.log(error);
-		}*/
-	})
-})
+		});
+});
